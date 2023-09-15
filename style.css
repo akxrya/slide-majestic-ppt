@@ -1,0 +1,211 @@
+:root {
+  --bg: #213555;
+  --primary: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  left: 0;
+  right: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  overflow-x: hidden;
+}
+
+/* Navbar Section */
+.navbar {
+  background-color: rgba(1, 1, 1, 0.8);
+}
+
+.navbar .navbar-logo {
+  color: var(--bg);
+  display: inline-block;
+  padding: 1rem 0 1rem 7rem;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(33, 53, 85, 1) 5%,
+    rgba(255, 255, 255, 0) 40%
+  );
+}
+
+.hero .hero-text {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 7%;
+}
+
+.hero .hero-text h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 5rem;
+  padding: 0 30rem 0 0;
+  line-height: 1.5;
+  mix-blend-mode: difference;
+}
+
+.hero .hero-text p {
+  color: white;
+  font-weight: 400;
+  font-size: 1.38rem;
+  line-height: 2;
+  padding: 0 15rem 0 0;
+  mix-blend-mode: difference;
+}
+
+/* Header Text Price */
+.price {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.price .price-text {
+  display: flex;
+  color: var(--primary);
+  align-items: center;
+  justify-content: center;
+  padding: 0 7%;
+}
+
+.price .price-text h1 {
+  font-weight: 700;
+  font-size: 5rem;
+  text-align: left;
+  line-height: 1.5;
+  padding: 1rem 4rem;
+}
+
+.price .price-text p {
+  font-weight: 400;
+  margin: 2rem 4rem 2rem 4rem;
+  font-size: 1.38rem;
+  line-height: 2;
+  text-align: justify;
+}
+
+.paket {
+  background-color: #010101;
+  color: var(--primary);
+  padding: 7rem 20%;
+}
+
+/* Tombol "Order Sekarang" */
+.paket-pelajar .order-button {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background-color: var(--primary); /* Warna latar belakang tombol */
+  color: var(--bg); /* Warna teks tombol */
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.paket-pelajar .order-button:hover {
+  background-color: var(--bg); /* Warna latar belakang tombol saat digulir */
+  color: var(--primary); /* Warna teks tombol saat digulir */
+  cursor: pointer;
+}
+
+.icon {
+  display: flex;
+  align-items: center; /* Untuk mengatur ikon dan teks menjadi sejajar secara vertikal */
+  text-align: center;
+  margin-bottom: 1rem; /* Memberikan ruang di antara setiap ikon + teks */
+}
+
+/* Footer */
+.footer {
+  background-color: var(--bg);
+  padding: 1.2rem;
+}
+
+.footer p {
+  font-weight: 200;
+  color: var(--primary);
+  font-size: 1.2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .navbar .navbar-logo {
+    display: inline-block;
+    padding: 2rem 0 2rem 3.5rem;
+  }
+
+  .price .price-text {
+    display: block;
+    padding: 2rem 7%;
+  }
+
+  .price .price-text h1,
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+/* Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
