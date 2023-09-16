@@ -1,6 +1,6 @@
 :root {
-  --bg: #213555;
-  --primary: #f0f0f0;
+  --bg: #1a120b;
+  --primary: #d5cea3;
 }
 
 * {
@@ -15,6 +15,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* Navbar Section */
@@ -23,7 +24,7 @@ body {
 }
 
 .navbar .navbar-logo {
-  color: var(--bg);
+  color: var(--primary);
   display: inline-block;
   padding: 1rem 0 1rem 7rem;
   font-weight: 800;
@@ -39,25 +40,11 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(img/hero.jpg);
+  background-color: var(--primary);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
-}
-
-.hero::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 40%;
-  bottom: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(33, 53, 85, 1) 5%,
-    rgba(255, 255, 255, 0) 40%
-  );
 }
 
 .hero .hero-text {
@@ -68,21 +55,19 @@ body {
 }
 
 .hero .hero-text h1 {
-  color: white;
+  color: var(--bg);
   font-weight: 700;
   font-size: 5rem;
   padding: 0 30rem 0 0;
   line-height: 1.5;
-  mix-blend-mode: difference;
 }
 
 .hero .hero-text p {
-  color: white;
+  color: var(--bg);
   font-weight: 400;
   font-size: 1.38rem;
   line-height: 2;
   padding: 0 15rem 0 0;
-  mix-blend-mode: difference;
 }
 
 /* Header Text Price */
@@ -122,17 +107,63 @@ body {
 }
 
 .paket {
+  background-color: var(--primary);
+  color: var(--bg);
+  padding: 7rem 20%;
+}
+
+/* Gallery */
+.gallery {
   background-color: #010101;
   color: var(--primary);
-  padding: 7rem 20%;
+  padding: 2rem 10%;
+}
+
+.gallery .text-gallery {
+  padding: 2rem 10%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery .text-gallery h2 {
+  margin: 0.6rem 15rem;
+  line-height: 1.5;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.gallery .row {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.gallery .row .gallery-card {
+  text-align: center;
+  padding: 1rem 4rem;
+}
+
+.gallery .row .gallery-card img {
+  width: 40rem;
+  padding-bottom: 1rem;
+  border-radius: 30px;
+}
+
+.menu .row .menu-card .menu-card-title {
+  margin: 1rem 0.5rem;
+}
+
+.gallery .pengumpul-1 {
+  display: block;
 }
 
 /* Tombol "Order Sekarang" */
 .paket-pelajar .order-button {
   display: inline-block;
   padding: 0.7rem 1.2rem;
-  background-color: var(--primary); /* Warna latar belakang tombol */
-  color: var(--bg); /* Warna teks tombol */
+  background-color: var(--bg); /* Warna latar belakang tombol */
+  color: var(--primary); /* Warna teks tombol */
   border: none;
   border-radius: 0.7rem;
   font-size: 1.2rem;
@@ -144,7 +175,7 @@ body {
 
 .paket-pelajar .order-button:hover {
   background-color: var(--bg); /* Warna latar belakang tombol saat digulir */
-  color: var(--primary); /* Warna teks tombol saat digulir */
+  color: #010101; /* Warna teks tombol saat digulir */
   cursor: pointer;
 }
 
@@ -200,6 +231,21 @@ body {
     justify-content: center;
     align-items: center;
     text-align: left;
+  }
+
+  .gallery .text-gallery {
+    padding: 2rem 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery .text-gallery h2 {
+    margin: 0.6rem 0;
+  }
+
+  .gallery .row {
+    flex-wrap: wrap;
   }
 }
 
