@@ -106,13 +106,7 @@ body {
   text-align: justify;
 }
 
-.paket {
-  background-color: var(--primary);
-  color: var(--bg);
-  padding: 7rem 20%;
-}
-
-/* Gallery */
+/* Gallery Styles */
 .gallery {
   background-color: #010101;
   color: var(--primary);
@@ -137,17 +131,18 @@ body {
   display: flex;
   margin-top: 1rem;
   justify-content: center;
+  flex-wrap: wrap; /* Mengatur elemen-elemen untuk meluncur ke bawah jika tidak cukup ruang */
 }
 
 .gallery .row .gallery-card {
   text-align: center;
-  padding: 1rem 4rem;
+  padding: 1rem; /* Tambahkan padding di sini */
 }
 
 .gallery .row .gallery-card img {
   width: 40rem;
   padding-bottom: 1rem;
-  border-radius: 30px;
+  margin: 0 auto;
 }
 
 .menu .row .menu-card .menu-card-title {
@@ -158,32 +153,45 @@ body {
   display: block;
 }
 
-/* Tombol "Order Sekarang" */
-.paket-pelajar .order-button {
-  display: inline-block;
-  padding: 0.7rem 1.2rem;
-  background-color: var(--bg); /* Warna latar belakang tombol */
-  color: var(--primary); /* Warna teks tombol */
-  border: none;
-  border-radius: 0.7rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.paket-pelajar .order-button:hover {
-  background-color: var(--bg); /* Warna latar belakang tombol saat digulir */
-  color: #010101; /* Warna teks tombol saat digulir */
-  cursor: pointer;
-}
-
-.icon {
+/* Paket Section */
+.paket {
+  min-height: 50vh;
+  background-color: var(--primary);
+  padding: 2rem;
   display: flex;
-  align-items: center; /* Untuk mengatur ikon dan teks menjadi sejajar secara vertikal */
-  text-align: center;
-  margin-bottom: 1rem; /* Memberikan ruang di antara setiap ikon + teks */
+  justify-content: center;
+  align-items: center;
+}
+
+.paket .paket-pelajar1,
+.paket-pelajar2,
+.paket-pelajar3 {
+  display: inline-block;
+  background-color: #aca788;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 0 2rem;
+}
+
+.paket .icon {
+  margin-bottom: 1rem;
+}
+
+.paket .btn {
+  background-color: var(--bg);
+  padding: 0.8rem;
+  color: #fff;
+  border-radius: 7px;
+}
+
+.paket .btn:hover {
+  background-color: var(--primary);
+  transition: 0.5s;
+}
+
+.paket .btn:hover::after {
+  background-color: #aca788;
+  transition: 0.5s;
 }
 
 /* Footer */
@@ -245,10 +253,30 @@ body {
   }
 
   .gallery .row {
-    flex-wrap: wrap;
+    flex-direction: column; /* Mengatur ulang elemen-elemen ke tata letak vertikal */
+  }
+
+  .paket .paket-pelajar1 {
+    display: none;
+  }
+
+  .paket .paket-pelajar2 {
+    display: none;
+  }
+
+  .paket .paket-pelajar3 {
+    display: inline-block;
+    padding: 5rem 10rem;
+    font-size: 2rem;
+    text-align: left;
+    justify-content: left;
+  }
+
+  .paket .paket-pelajar3 .icon {
+    display: flex;
+    text-align: left;
   }
 }
-
 /* Phone */
 @media (max-width: 450px) {
   html {
